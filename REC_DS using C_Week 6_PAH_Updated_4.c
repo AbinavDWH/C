@@ -106,24 +106,24 @@
 // 10
 
 // You are using GCC
-#include<stdio.h>
+    #include<stdio.h>
 
-int main(){
-    int n,c=0;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
-    }
-    for(int i=1;i<n;i++){
-        int key=arr[i];
-        int j=i-1;
-        while(j>=0 && arr[j]>key){
-            arr[j+1]=arr[j];
-            j--;
-            c++;
+    int main(){
+        int n,c=0;
+        scanf("%d",&n);
+        int arr[n];
+        for(int i=0;i<n;i++){
+            scanf("%d",&arr[i]);
         }
-        arr[j+1]=key;
+        for(int i=1;i<n;i++){
+            int key=arr[i];
+            int j=i-1;
+            while(j>=0 && arr[j]>key){
+                arr[j+1]=arr[j];
+                j--;
+                c++;
+            }
+            arr[j+1]=key;
+        }
+        printf("%d ",c);
     }
-    printf("%d ",c);
-}
