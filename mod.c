@@ -21,7 +21,6 @@ int main() {
         exp >>= 1;
     }
 
-    // printing __int128 is tricky:
-    long long out = (long long)result; // safe if small enough
+    long long out = (long long)result;
     printf("%lld\n", out);
 }
