@@ -8,8 +8,8 @@ int main(){
         float to;
         to=(b+m*i++)%a;
         if(to==0){
-            printf("%d i = %d",(b+m*(i-1))/a,i-1);
-            break;
+            printf("x = %d, i = %d\n",(b+m*(i-1))/a,i-1);
+            // break;
         }
     }
 
